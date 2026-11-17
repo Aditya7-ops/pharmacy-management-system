@@ -1,0 +1,20 @@
+erDiagram
+    MEDICINES ||--o{ SALES : "has sales"
+    MEDICINES {
+        int id PK
+        varchar name
+        varchar category
+        varchar manufacturer
+        date expiry_date
+        int quantity
+        decimal price
+    }
+    SALES {
+        int id PK
+        int medicine_id FK
+        varchar medicine_name
+        int quantity
+        decimal unit_price
+        decimal total_amount
+        timestamp sale_date
+    }
